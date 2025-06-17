@@ -1,0 +1,50 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import Button from '@/components/Button/Button.astro';
+import InfoSectionWithImage from '@/components/InfoSectionWithImage/InfoSectionWithImage.astro';
+import settings from '@/data/settings.json';
+const { site_name, brand, legal_city, legal_city_where } = settings;
+---
+
+<PageLayout 
+	h1="О бренде"
+	title={`${site_name} ${legal_city} — О бренде`} 
+	description={`Официальный дилер ${brand} в ${legal_city_where}. На сайте Вы можете подобрать и купить автомобиль JAECOO.`}
+	breadcrumb={[{name:"О бренде",href:""}]}
+>
+
+	<InfoSectionWithImage image={{
+		desktop: 'https://cdn.alexsab.ru/b/jaecoo/img/about/J8_720x488px_new.gif',
+	}}>
+		<h3 class="sr-only simple-title">О бренде</h3>
+		<p>Название JAECOO («Джейку́») образовано от немецкого слова Jaeger («охотник») и английского Cool («крутой»).</p>
+		<p>Охотник символизирует Скорость, Ловкость, Дикую природу и Страсть. Он сосредоточен на своей цели, Он сохраняет спокойствие, Он самодостаточен, обладает изысканным стилем и утонченным вкусом.</p>
+		<p>JAECOO — больше, чем автомобиль. Это верный помощник, с которым ты можешь реализовать задуманное. Надежный проводник в мир тех, с кем тебе точно по пути. И мощный навигатор, позволяющий исследовать мир возможностей на максимум. JAECOO помогает жить в разных режимах настоящего, получая бесценное удовольствие быть настоящим — во всем. Он — твой компаньон, активирующий жизненную силу и все возможности текущего момента. Думаешь, такого не бывает? Но вот же он, прямо перед тобой… JAECOO. ЭТО ПО-НАСТОЯЩЕМУ!</p>
+	</InfoSectionWithImage>
+
+	<div class="hidden">
+		<InfoSectionWithImage image={{
+			desktop: 'https://cdn.alexsab.ru/b/jaecoo/img/about/1_900.webp',
+			mobile: 'https://cdn.alexsab.ru/b/jaecoo/img/about/1_720.webp',
+		}}>
+			<h3 class="simple-title text-2xl font-bold mb-6 sm:mb-8 uppercase">J-SYSTEM</h3>
+			<Button url="#" classes="" title="Узнать больше" />
+		</InfoSectionWithImage>
+	</div>
+
+	<InfoSectionWithImage image={{
+		desktop: 'https://cdn.alexsab.ru/b/jaecoo/img/about/2_1440.webp',
+		mobile: 'https://cdn.alexsab.ru/b/jaecoo/img/about/2_720.webp',
+	}} direction='left'>
+		<h3 class="simple-title text-2xl font-bold mb-6 sm:mb-8 uppercase">Новости</h3>
+		<Button url="/news/" classes="" title="Узнать больше" />
+	</InfoSectionWithImage>
+
+	<InfoSectionWithImage image={{
+		desktop: 'https://cdn.alexsab.ru/b/jaecoo/img/about/3_1440.webp',
+		mobile: 'https://cdn.alexsab.ru/b/jaecoo/img/about/3_720.webp',
+	}} direction='left'>
+		<h3 class="simple-title text-2xl font-bold mb-6 sm:mb-8 uppercase">ПРАВОВАЯ ИНФОРМАЦИЯ</h3>
+		<Button url="/terms-conditions/" classes="" title="Узнать больше" />
+	</InfoSectionWithImage>
+</PageLayout>
