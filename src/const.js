@@ -27,18 +27,39 @@ export const LINKS_MENU = [
 		children
 	},
 	// {url: 'trade-in/', name: 'Оценка автомобиля'},
-	{url: 'special-offers/', name: 'Спецпредложения'},
-	{url: 'news/', name: 'Новости'},
-	{url: 'test-drive/', name: 'Запись на тест-драйв'},
-	{url: 'service-request/', name: 'Запись на сервис'},
+	{
+		url: 'javascript:void(0)',
+		name: 'Покупателям',
+		children: [
+			{ url: 'test-drive/', name: 'Запись на тест-драйв' },
+			{ url: 'special-offers/', name: 'Спецпредложения' },
+			{ url: 'customers-credit/', name: 'Кредитование и страхование' },
+		],
+	},
+	{
+		url: 'javascript:void(0)',
+		name: 'Владельцам',
+		children: [
+			{ url: 'service-request/', name: 'Запись на сервис' },
+			{ url: 'owners-service-promo/', name: 'Сервисные акции' },
+			{ url: 'owners-support/', name: 'Поддержка' },
+			{ url: 'special-offers/', name: 'Спецпредложения' },
+			{ url: 'iov/', name: 'JAECOO Connect' },
+		],
+	},
+	// {url: 'news/', name: 'Новости'},
 	{url: '#services', name: 'Услуги'},
+	{url: 'about/', name: 'О бренде'},
 	{url: 'contacts/', name: 'Контакты'},
 ];
 
 // Коллекции
 export const COLLECTIONS = [
 	{name: 'special-offers', title: 'Спецпредложения'},
-	{name: 'news', title: 'Новости'},
+	// {name: 'news', title: 'Новости'},
+	{name: 'owners-service-promo', title: 'Сервисные акции'},
+	{name: 'owners-support', title: 'Поддержка'},
+	{name: 'customers-credit', title: 'Кредитование и страхование'},
 ];
 
 // Текст согласия в формах
